@@ -33,6 +33,11 @@ class Question
     private $answeredAt;
 
     /**
+     * @var Answer
+     */
+    private $answer;
+
+    /**
      * Get id
      *
      * @return int
@@ -120,6 +125,22 @@ class Question
     public function setAnsweredAt($answeredAt)
     {
         $this->answeredAt = $answeredAt;
+    }
+
+    /**
+     * @return Answer
+     */
+    public function getAnswer()
+    {
+        return $this->answer;
+    }
+
+    /**
+     * @param Answer $answer
+     */
+    public function setAnswer($answer)
+    {
+        $this->answer = $answer;
     }
 }
 

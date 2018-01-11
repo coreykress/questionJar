@@ -1,0 +1,25 @@
+AppBundle\Entity\Answer:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\AnswerRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToOne:
+        question:
+            targetEntity: Question
+            inversedBy: answer
+            joinColumn:
+                name: question_id
+                referencedColumnName: id
+    fields:
+        body:
+            type: string
+            length: 255
+        createdAt:
+            type: datetime
+            column: created_at
+    lifecycleCallbacks: {  }

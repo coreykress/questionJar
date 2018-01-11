@@ -8,6 +8,10 @@ AppBundle\Entity\Question:
             id: true
             generator:
                 strategy: AUTO
+    oneToOne:
+        answer:
+            targetEntity: Answer
+            mappedBy: question
     fields:
         body:
             type: string
