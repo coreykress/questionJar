@@ -1,0 +1,24 @@
+AppBundle\Entity\Question:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\QuestionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        body:
+            type: string
+            length: 255
+        isAnswered:
+            type: boolean
+            column: is_answered
+        askedAt:
+            type: datetime
+            column: asked_at
+        answeredAt:
+            type: datetime
+            column: answered_at
+    lifecycleCallbacks: {  }
