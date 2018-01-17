@@ -1,16 +1,31 @@
 import React, { Component } from 'react';
 import './App.css';
+import 'whatwg-fetch';
 
 class QuestionForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
             value: "",
-        }
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
-        return;
+        fetch('http://localhost:8000/question', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: this.state.value,
+        });
+        e.preventDefault();
+    }
+
+    handleChange(event) {
+        this.setState({value: event.target.value});
     }
 
     render() {
