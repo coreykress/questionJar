@@ -12,7 +12,7 @@ class DefaultController extends Controller
 {
  function indexAction(Request $request)
     {
-        return new Response('test');
+        return new Response('butts');
 //        // replace this example code with whatever you need
 //        return $this->render('default/index.html.twig', [
 //            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,

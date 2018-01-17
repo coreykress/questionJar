@@ -1,3 +1,8 @@
 homepage:
     path:     /
     defaults: { _controller: AppBundle:Default:index }
+
+new_question:
+    path:     /question
+    defaults: { _controller: AppBundle:QuestionControllerController:newQuestion }
+    methods: [POST]

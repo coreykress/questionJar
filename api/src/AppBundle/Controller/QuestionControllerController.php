@@ -16,4 +16,11 @@ class QuestionControllerController extends Controller
 //            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
 //        ]);
     }
+
+    function newQuestionAction(Request $request)
+    {
+        $content = json_decode($request->getContent());
+
+        return new Response($content);
+    }
 }
