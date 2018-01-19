@@ -14,13 +14,17 @@ class QuestionForm extends Component {
     }
 
     handleSubmit(e) {
-        fetch('http://localhost:8000/question', {
+        let json = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: this.state.value,
-        });
+            body: JSON.stringify({
+                question: this.state.value,
+            }),
+        };
+
+        fetch('http://localhost:8000/question', json);
         e.preventDefault();
     }
 

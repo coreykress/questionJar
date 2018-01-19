@@ -4,5 +4,5 @@ homepage:
 
 new_question:
     path:     /question
-    defaults: { _controller: AppBundle:QuestionControllerController:newQuestion }
+    defaults: { _controller: AppBundle:QuestionController:newQuestion }
     methods: [POST]

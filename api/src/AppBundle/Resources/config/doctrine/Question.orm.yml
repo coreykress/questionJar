@@ -25,4 +25,5 @@ AppBundle\Entity\Question:
         answeredAt:
             type: datetime
             column: answered_at
+            nullable: true
     lifecycleCallbacks: {  }

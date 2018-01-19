@@ -37,6 +37,11 @@ class Question
      */
     private $answer;
 
+    public function __construct()
+    {
+        $this->askedAt = date_create();
+    }
+
     /**
      * Get id
      *
